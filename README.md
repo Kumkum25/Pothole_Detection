@@ -1,5 +1,5 @@
-# Pothole_Detection
-# 🚧 Pothole Detection Using Traditional CV + YOLOv8 (3-Method Comparison)
+
+# 🚧 Pothole Detection Using Traditional CV + YOLOv8 (3-Method Comparison) with Depth estimation
 
 This project demonstrates three approaches to detect potholes from road images using **Computer Vision** and **Deep Learning**.  
 The goal is to identify potholes, draw bounding boxes, and count them per image — while comparing how accuracy improves from simple CV methods to YOLOv8.
@@ -13,6 +13,12 @@ To automatically detect potholes in road surface images by:
 - Counting the number of potholes per image  
 - Comparing traditional CV techniques with YOLOv8 deep learning detection  
 
+## 🚀 Key Project Highlights
+- Implemented 3 pothole detection methods  
+- Compared traditional CV vs. deep learning  
+- Integrated **YOLOv8 for high-accuracy detection**  
+- Added **pothole depth estimation**  
+- Real-time performance suitable for smart city applications  
 ---
 
 # 🧠 Method 1 — Threshold-Based Contour Extraction
@@ -114,3 +120,28 @@ So we use **YOLOv8**, a state-of-the-art deep learning model that learns pothole
 
 ---
 
+🕳️ Pothole Depth Estimation (Additional Feature)
+
+Along with pothole detection, this project also estimates the approximate depth of each pothole.
+Depth estimation helps prioritize road repairs based on severity.
+
+🔧 How Depth Estimation Works
+
+After YOLOv8 detects potholes, each bounding box is processed.
+
+Image features inside the region are analyzed to approximate the depth.
+
+The depth values (in approximate units) are displayed above each pothole.
+
+Example result:
+✔ Depth: 21.957
+✔ Depth: 35.785
+✔ Depth: 45.896
+
+🟡 Why Depth Matters?
+
+Identifies dangerous potholes (deep ones)
+
+Helps municipalities prioritize repair
+
+Useful in autonomous vehicles, traffic surveillance, and road maintenance
